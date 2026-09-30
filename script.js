@@ -49,6 +49,7 @@ const SERVICES = [
 ];
 
 const GALLERY = [
+  { src: "WhatsApp Image 2026-09-30 at 1.32.11 PM.jpeg", caption: "Modern chandelier — supplied & installed" },
   { src: "WhatsApp Image 2026-09-30 at 5.33.56 AM.jpeg", caption: "700W itel solar street light in stock" },
   { src: "WhatsApp Image .png", caption: "Solar street light with panel — installed unit" },
   { src: "WhatsApp Image 2026-09-29 at 7.40.52 PM.jpeg", caption: "300W itel solar street light" },
@@ -217,6 +218,7 @@ document.getElementById("quoteForm").addEventListener("submit", function (e) {
 
 /* ---------- Dynamic rotating hero background ---------- */
 const HERO_BGS = [
+  "WhatsApp Image 2026-09-30 at 1.32.11 PM.jpeg",
   "242341_1751823257.webp",
   "WhatsApp Image 2026-09-30 at 5.33.56 AM.jpeg",
   "WhatsApp Image .png",
