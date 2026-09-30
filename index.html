@@ -65,7 +65,7 @@
           <span class="badge rounded-pill bg-warning text-dark mb-3 px-3 py-2">
             <i class="bi bi-patch-check-fill"></i> CAC Registered — BN 982●●●●9
           </span>
-          <h1 class="display-3 fw-bold hero-title">Powering Homes &amp; Businesses — <span class="text-warning">Wholesale Prices, Nationwide Delivery</span></h1>
+          <h1 class="display-5 fw-bold hero-title">Powering Homes &amp; Businesses — <span class="text-warning">Wholesale Prices, Nationwide Delivery</span></h1>
           <p class="lead mt-3 hero-sub">
             UZONNAH ELECTRICAL SERVICES is a federally registered <strong>wholesale</strong> supplier of
             electrical materials and solar products. From cables and bulbs to solar street lights and
@@ -97,11 +97,11 @@
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6 reveal">
-          <img src="Electronic-Components-Names-in-English-with-Pictures-1200x720.png" alt="Electronic components" class="img-fluid rounded-4 shadow about-img" />
+          <img src="WhatsApp Image 2026-09-30 at 2.13.30 PM.jpeg" alt="Uzonnah Electrical products" class="img-fluid rounded-4 shadow about-img" />
         </div>
         <div class="col-lg-6 reveal">
           <span class="section-eyebrow">ABOUT US</span>
-          <h2 class="fw-bold mb-3">Your No.1 Wholesale Electrical Plug</h2>
+          <h3 class="fw-bold mb-3">Your No.1 Wholesale Electrical Plug</h3>
           <p class="text-secondary">
             <strong>UZONNAH ELECTRICAL SERVICES</strong> is registered with the Corporate Affairs
             Commission under the <strong>Companies and Allied Matters Act 2020</strong> of the
@@ -110,15 +110,18 @@
           <p class="text-secondary">
             We operate as a <strong>wholesaler</strong> of electrical and solar products — supplying
             retailers, electricians, contractors, estates and organisations with goods in bulk at
-            wholesale prices. We also render professional electrical/electronic services: wiring,
-            installations, solar and inverter systems, and maintenance.
+            wholesale prices. 
           </p>
           <ul class="list-unstyled about-list mt-4">
             <li><i class="bi bi-check-circle-fill text-warning"></i> <strong>Wholesale &amp; bulk supply</strong> at best prices</li>
             <li><i class="bi bi-check-circle-fill text-warning"></i> Nationwide delivery of goods</li>
             <li><i class="bi bi-check-circle-fill text-warning"></i> Genuine, quality-tested materials</li>
             <li><i class="bi bi-check-circle-fill text-warning"></i> Trusted by electricians, shops &amp; contractors</li>
+            <li><i class="bi bi-check-circle-fill text-warning"></i> <strong>Wholesale dealer</strong> in all kinds of itel solar street light</li>
           </ul>
+          <button type="button" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold mt-3" data-bs-toggle="modal" data-bs-target="#solarModal">
+            <i class="bi bi-sun-fill"></i> View Solar Street Lights
+          </button>
         </div>
       </div>
     </div>
@@ -227,16 +230,16 @@
                 <input type="email" class="form-control" id="email" />
               </div>
               <div class="col-md-6">
-                <label class="form-label">Service Needed *</label>
+                <label class="form-label">Goods Needed *</label>
                 <select class="form-select" id="serviceSelect" required>
-                  <option value="">Choose a service…</option>
+                  <option value="">Choose the goods you need…</option>
                 </select>
-                <div class="invalid-feedback">Please select a service.</div>
+                <div class="invalid-feedback">Please select the goods you need.</div>
               </div>
               <div class="col-12">
-                <label class="form-label">Tell us about the job *</label>
+                <label class="form-label">Describe the goods you want *</label>
                 <textarea class="form-control" id="message" rows="4" required></textarea>
-                <div class="invalid-feedback">Please describe the job.</div>
+                <div class="invalid-feedback">Please describe the goods you want.</div>
               </div>
               <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
                 <button type="submit" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold">
@@ -417,6 +420,27 @@
         <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body" id="greetBody"></div>
+    </div>
+  </div>
+
+  <!-- Solar Street Lights modal -->
+  <div class="modal fade" id="solarModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold"><i class="bi bi-sun-fill text-warning"></i> Solar Street Lights — Wholesale</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-secondary mb-3">We are wholesale dealers of all kinds of <strong>itel solar street lights</strong>. Buy in bulk at unbeatable prices — delivered anywhere in Nigeria.</p>
+          <div class="row g-3" id="solarGrid"><!-- injected by script.js --></div>
+          <div class="text-center mt-4">
+            <a href="https://wa.me/2347062536030?text=Hello%20UZONNAH!%20I%20want%20to%20order%20itel%20solar%20street%20lights%20in%20bulk.%20Please%20send%20wholesale%20prices." target="_blank" rel="noopener" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold">
+              <i class="bi bi-whatsapp"></i> Order Solar Lights via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

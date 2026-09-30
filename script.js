@@ -5,7 +5,7 @@
 /* ---------- Data (from CAC certificate + services) ---------- */
 const SERVICES = [
   {
-    title: "House & Office Wiring",
+    title: "House & Office Wire",
     icon: "bi-plug-fill",
     img: "images (1).jpg",
     short: "Complete new-build and rewiring to Nigerian standards.",
@@ -19,36 +19,18 @@ const SERVICES = [
     detail: "Sizing, supply and installation of solar panels, charge controllers, inverters and batteries — including all-in-one solar street lights for estates, streets and compounds."
   },
   {
-    title: "Electrical Installations",
+    title: "Electrical Installations materials",
     icon: "bi-lightbulb-fill",
     img: "images (15).jpg",
     short: "Lighting, DB boards, pumps, ACs and appliances.",
     detail: "Professional installation of lighting systems, distribution boards, water pumps, air conditioners, industrial equipment and household appliances with correct protection sizing."
   },
-  {
-    title: "Fault Finding & Repairs",
-    icon: "bi-tools",
-    img: "images (13).jpg",
-    short: "Fast diagnosis of trips, faults and power issues.",
-    detail: "Systematic troubleshooting of circuit trips, voltage drop, earth faults, burning smells and dead sockets. We find the real fault, not just the symptom."
-  },
-  {
-    title: "Electronic Device Repairs",
-    icon: "bi-cpu-fill",
-    img: "Electronic-Components-Names-in-English-with-Pictures-1200x720.png",
-    short: "Component-level repair of electronics and gadgets.",
-    detail: "Repair of electronic devices and control boards at component level — power supplies, chargers, small appliances and control circuits."
-  },
-  {
-    title: "Maintenance Contracts",
-    icon: "bi-shield-check",
-    img: "many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-153892434.webp",
-    short: "Scheduled maintenance for homes and businesses.",
-    detail: "Planned preventive maintenance visits for homes, offices, shops and factories — inspections, tightening, load checks and lamp replacement to keep you powered without surprises."
-  }
 ];
 
 const GALLERY = [
+  { src: "WhatsApp Image 2026-09-30 at 1.51.48 PM.jpeg", caption: "Coleman cables in stock — wholesale supply" },
+  { src: "WhatsApp Image 2026-09-30 at 2.13.30 PM.jpeg", caption: "Designer switch & socket collection" },
+  { src: "WhatsApp Image 2026-09-30 at 2.13.49 PM.jpeg", caption: "itel 40W smart charge LED bulb — 5000mAh" },
   { src: "WhatsApp Image 2026-09-30 at 1.32.11 PM.jpeg", caption: "Modern chandelier — supplied & installed" },
   { src: "WhatsApp Image 2026-09-30 at 5.33.56 AM.jpeg", caption: "700W itel solar street light in stock" },
   { src: "WhatsApp Image .png", caption: "Solar street light with panel — installed unit" },
@@ -56,7 +38,6 @@ const GALLERY = [
   { src: "WhatsApp Image 2026-09-29 at 7.40.51 PM.jpeg", caption: "Decorative indoor lighting — supplied & fitted" },
   { src: "images (10).jpg", caption: "Installation project" },
   { src: "images (12).jpg", caption: "Panel work" },
-  { src: "images (13).jpg", caption: "Fault repair job" },
   { src: "images (11).jpg", caption: "Wiring close-up" },
   { src: "images (14).jpg", caption: "Job site" },
   { src: "images (16).jpg", caption: "Testing & safety" },
@@ -209,8 +190,8 @@ document.getElementById("quoteForm").addEventListener("submit", function (e) {
     `Name: ${name}%0A` +
     `Phone: ${phone}%0A` +
     (email ? `Email: ${email}%0A` : "") +
-    `Service Needed: ${service}%0A%0A` +
-    `Job Details: ${msg}`;
+    `Goods Needed: ${service}%0A%0A` +
+    `Goods Description: ${msg}`;
 
   document.getElementById("formFeedback").classList.remove("d-none");
   window.open("https://wa.me/2347062536030?text=" + text, "_blank");
@@ -334,3 +315,35 @@ connectPopup.querySelectorAll("a").forEach((a) =>
 
 /* ---------- Footer year ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ---------- Solar Street Light showcase modal ---------- */
+const SOLAR_PRODUCTS = [
+  { src: "WhatsApp Image 2026-09-30 at 5.33.56 AM.jpeg", caption: "700W itel solar street light" },
+  { src: "WhatsApp Image 2026-09-29 at 7.40.52 PM.jpeg", caption: "300W itel solar street light" },
+  { src: "WhatsApp Image .png", caption: "Solar street light with panel — installed unit" },
+  { src: "Industrial-Solar-Street-Light-All-In-One-430x430.jpg", caption: "All-in-one industrial solar street light" },
+  { src: "Itel-Solar-Power-Tank-charging.webp", caption: "itel Solar Power Tank — charging solution" }
+];
+
+const solarGrid = document.getElementById("solarGrid");
+if (solarGrid) {
+  SOLAR_PRODUCTS.forEach((p) => {
+    const col = document.createElement("div");
+    col.className = "col-6 col-md-4";
+    col.innerHTML = `
+      <div class="gallery-item" role="button" tabindex="0" aria-label="View: ${p.caption}">
+        <img src="${p.src}" alt="${p.caption}" loading="lazy" />
+        <div class="gallery-caption"><span><i class="bi bi-zoom-in me-2"></i>${p.caption}</span></div>
+      </div>`;
+    const open = () => {
+      document.getElementById("lightboxImg").src = p.src;
+      document.getElementById("lightboxImg").alt = p.caption;
+      new bootstrap.Modal("#lightbox").show();
+    };
+    col.querySelector(".gallery-item").addEventListener("click", open);
+    col.querySelector(".gallery-item").addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+    });
+    solarGrid.appendChild(col);
+  });
+}
