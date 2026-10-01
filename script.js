@@ -25,11 +25,21 @@ const SERVICES = [
     short: "Lighting, DB boards, pumps, ACs and appliances.",
     detail: "Professional installation of lighting systems, distribution boards, water pumps, air conditioners, industrial equipment and household appliances with correct protection sizing."
   },
+  {
+    title: "A dealer in switches and sockets of all kinds",
+    icon: "bi-plug-fill",
+    img: "WhatsApp Image 2026-09-30 at 2.13.30 PM.jpeg",
+    short: "Modern switch and socket varieties for homes, offices and buildings.",
+    detail: "A wide range of switches and sockets in different designs and finishes for residential, commercial and industrial installations."
+  },
 ];
 
 const GALLERY = [
   { src: "WhatsApp Image 2026-09-30 at 1.51.48 PM.jpeg", caption: "Coleman cables in stock — wholesale supply" },
-  { src: "WhatsApp Image 2026-09-30 at 2.13.30 PM.jpeg", caption: "Designer switch & socket collection" },
+  { src: "WhatsApp Image 2026-09-30 at 2.13.30 PM.jpeg", caption: "Dealer in all kinds of switches and sockets" },
+  { src: "blueswitchs.jpeg", caption: "Switches and sockets of all kinds" },
+  { src: "electric socket.jpeg", caption: "Socket and switch varieties for every installation" },
+  { src: "WhatsApp Image.jpeg", caption: "Modern switch and socket collections" },
   { src: "WhatsApp Image 2026-09-30 at 2.13.49 PM.jpeg", caption: "itel 40W smart charge LED bulb — 5000mAh" },
   { src: "WhatsApp Image 2026-09-30 at 1.32.11 PM.jpeg", caption: "Modern chandelier — supplied & installed" },
   { src: "WhatsApp Image 2026-09-30 at 5.33.56 AM.jpeg", caption: "700W itel solar street light in stock" },
@@ -41,7 +51,6 @@ const GALLERY = [
   { src: "images (11).jpg", caption: "Wiring close-up" },
   { src: "images (14).jpg", caption: "Job site" },
   { src: "images (16).jpg", caption: "Testing & safety" },
-  { src: "images (17).jpg", caption: "Accessories" },
   { src: "images (18).jpg", caption: "Finished work" },
   { src: "images (101).jpg", caption: "Workshop stock" },
   { src: "Itel-Solar-Power-Tank-charging.webp", caption: "Solar charging solution" }
